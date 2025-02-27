@@ -42,11 +42,12 @@ def bulkInstallModsCommand():
     print(Fore.WHITE + "(Make sure to insert the right game ID, the current one is: %s)"%gameID)
     print(Fore.RED + "!SEPARATE EACH MOD ID WITH A SPACE!")
 
-    ids = input(Fore.GREEN + "Insert the id of the mod you want to download:" + Fore.WHITE)
+    ids = input(Fore.GREEN + "Insert the id of the mods you want to download:" + Fore.WHITE)
     idsList = []
 
     for x in ids.split(" "):
         idsList += [int(x)]
+    installMods(idsList)
 
 def helpCommand():
     print(Fore.GREEN + "Command list:" + Fore.BLUE)
